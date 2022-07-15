@@ -15,7 +15,7 @@ const onGeoSuccess = (position) => {
       const weatherIcon = data.weather[0].icon;
 
       $city.innerText = `${data.name}, ${data.sys.country}`;
-      $weather.innerHTML = `<img src='${iconUrl}${weatherIcon}@2x.png' alt='${data.weather[0].main}'>, ${data.main.temp}℃`;
+      $weather.innerHTML = `<img src='${iconUrl}${weatherIcon}@2x.png' alt='${data.weather[0].main}'>${data.main.temp}℃`;
     });
 };
 const onGeoError = () => {
