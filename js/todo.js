@@ -37,7 +37,7 @@ const paintToDo = (newToDo) => {
   $li.appendChild($span);
   $li.appendChild($button);
   $li.id = newToDo.id;
-  $span.innerText = newToDo.text;
+  $span.innerText = `📌 ${newToDo.text}`;
   $button.innerText = '❌';
   $button.addEventListener('click', removeToDo);
   toDoList.appendChild($li);
