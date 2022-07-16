@@ -17,8 +17,21 @@ const onLoginSubmit = (event) => {
 };
 
 const paintGreetings = (username) => {
+  const initButton = document.createElement('button');
+  const clearInfo = () => localStorage.clear();
+  initButton.classList.add('button');
+  initButton.innerText = 'Initialized';
+  initButton.addEventListener('click', () => {
+    if (window.confirm('Initialize all the information. Do you agree?')) {
+      clearInfo();
+      window.location.reload();
+    } else {
+      return;
+    }
+  });
   greeting.classList.remove(HIDDEN_CLASSNAME);
   greeting.innerHTML = `${greet}, <strong>${username}</strong>`;
+  greeting.appendChild(initButton);
 };
 
 const savedUsername = localStorage.getItem(USERNAME_KEY);
