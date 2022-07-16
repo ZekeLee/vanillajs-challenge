@@ -8,14 +8,14 @@ const onGeoSuccess = (position) => {
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
-      console.log(data.weather[0].icon);
       const $city = document.getElementById('city');
       const $weather = document.getElementById('weather');
       const weatherIcon = data.weather[0].icon;
 
       $city.innerText = `${data.name}, ${data.sys.country}`;
-      $weather.innerHTML = `<img src='${iconUrl}${weatherIcon}@2x.png' alt='${data.weather[0].main}'>${data.main.temp}℃`;
+      $weather.innerHTML = `<img src='${iconUrl}${weatherIcon}@2x.png' alt='${
+        data.weather[0].main
+      }'>${data.main.temp.toFixed(1)}℃`;
     });
 };
 const onGeoError = () => {
