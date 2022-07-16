@@ -20,7 +20,7 @@ const paintGreetings = (username) => {
   const initButton = document.createElement('button');
   const clearInfo = () => localStorage.clear();
   initButton.classList.add('button');
-  initButton.innerText = 'Initialized';
+  initButton.innerText = 'Initialization';
   initButton.addEventListener('click', () => {
     if (window.confirm('Initialize all the information. Do you agree?')) {
       clearInfo();
