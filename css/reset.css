@@ -136,6 +136,7 @@ button {
   line-height: 1;
   background: none;
   border: none;
+  border-radius: 0;
 }
 
 input {
