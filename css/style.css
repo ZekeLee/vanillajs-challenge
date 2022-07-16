@@ -20,6 +20,7 @@ body {
     'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
     sans-serif;
   color: #222;
+  word-break: break-word;
 }
 
 .app {
@@ -33,27 +34,33 @@ body {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
-main {
-  padding: 1rem 0;
-  flex-grow: 1;
+.input {
+  line-height: 2rem;
+  border-bottom: 2px solid #d587b3;
+  transition: 0.2s;
+}
+.input:focus {
+  border-color: #222;
 }
 
-section + section {
-  margin-top: 1rem;
-}
-
-footer {
-  text-align: center;
+.button {
+  padding: 0 1rem;
+  color: #fff;
+  line-height: 2rem;
+  border-radius: 15px;
+  background: linear-gradient(90deg, #ee5c87, #f1a4b5, #d587b3);
 }
 
 /* Header */
 header {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  padding-bottom: 1rem;
   font-weight: 500;
 }
 
@@ -64,7 +71,113 @@ header {
   display: inline-block;
   margin: 0 0.5rem 0 1rem;
   height: 3rem;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   vertical-align: middle;
+}
+
+/* Main */
+main {
+  flex-grow: 1;
+  margin-left: -1rem;
+  padding: 0 1rem;
+  width: calc(100% + 2rem);
+  overflow: hidden auto;
+}
+
+section + section {
+  margin-top: 2rem;
+}
+
+#login-form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: #fff;
+}
+#login-form .input {
+  width: 50vw;
+  max-width: 500px;
+}
+#login-form .button {
+  margin-top: 1rem;
+  width: 50vw;
+  max-width: 500px;
+}
+
+#greeting {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  font-size: 2rem;
+  text-align: center;
+}
+#greeting .button {
+  margin: 0.5rem;
+  font-size: 1rem;
+}
+
+#todo-form {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+#todo-form .input {
+  flex-grow: 1;
+  width: 100%;
+}
+
+#todo-form .button {
+  flex-shrink: 0;
+  margin-left: 0.5rem;
+}
+
+#todo-list {
+  margin: 2rem auto 0;
+  max-width: 500px;
+}
+
+#todo-list li {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+#todo-list li + li {
+  margin-top: 1rem;
+}
+
+#todo-list li span {
+  display: flex;
+  align-items: flex-start;
+}
+
+#todo-list button {
+  margin-left: 1rem;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-top: 1rem;
+}
+
+#author {
+  margin-left: 0.5rem;
+  flex-shrink: 0;
+  font-weight: 500;
 }

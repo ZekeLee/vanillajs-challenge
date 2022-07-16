@@ -10,7 +10,7 @@
 <body>
   <div class="app">
     <header>
-      <h2 id="clock"></h2>
+      <div id="clock"></div>
       <div id="location">
         <span id="city"></span>
         <span id="weather"></span>
@@ -19,16 +19,16 @@
     <main>
       <section>
         <form id="login-form" class="hidden">
-          <input type="text" maxlength="15" required placeholder="What is your name?">
-          <button type="submit">Login</button>
+          <input type="text" class="input" maxlength="15" required placeholder="What is your name?">
+          <button type="submit" class="button">LOGIN</button>
         </form>
 
-        <p id="greeting" class="hidden"></p>
+        <div id="greeting" class="hidden"></div>
       </section>
       <section>
         <form id="todo-form">
-          <input type="text" placeholder="Write a To do" required>
-          <button type="submit">Add</button>
+          <input type="text" class="input" placeholder="Write a To do" required>
+          <button type="submit" class="button">Add</button>
         </form>
         <ul id="todo-list"></ul>
       </section>
