@@ -7,5 +7,6 @@
 - [x] 날씨와 위치 (geolocation)
 * 날씨 API - [https://openweathermap.org/current](https://openweathermap.org/current)
 - [x] 로그인, 비로그인 메인 화면 분리
+- [x] 로그아웃 기능 추가
 
 > ### Reference : [노마드 코더 바닐라 JS로 크롬앱 만들기](https://nomadcoders.co/javascript-for-beginners/)
