@@ -1,6 +1,6 @@
-## 바닐라 JS 챌린지 졸업 작품
+## 바닐라 JS 챌린지
 
-### [https://dingunote.github.io/vanillajs-challenge/](https://dingunote.github.io/vanillajs-challenge/)
+### [https://zekelee.github.io/vanillajs-challenge/](https://zekelee.github.io/vanillajs-challenge/)
 
 - [x] 실시간 시계
 - [x] 로컬 스토리지를 사용한 로그인
